@@ -20,12 +20,15 @@
 }
 
 .mtkoverflow {
-	background-color: var(--vscode-button-background, var(--vscode-editor-background));
+	background-color: var(
+		--vscode-button-background,
+		var(--vscode-editor-background)
+	);
 	color: var(--vscode-button-foreground, var(--vscode-editor-foreground));
 	border-width: 1px;
 	border-style: solid;
 	border-color: var(--vscode-contrastBorder);
-	border-radius: 2px;
+	border-radius: var(--tomi-radius);
 	padding: 4px;
 	cursor: pointer;
 }

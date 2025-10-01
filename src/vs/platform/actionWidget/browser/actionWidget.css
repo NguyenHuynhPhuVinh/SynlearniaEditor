@@ -12,7 +12,7 @@
 	display: block;
 	width: 100%;
 	border: 1px solid var(--vscode-editorWidget-border) !important;
-	border-radius: 5px;
+	border-radius: var(--tomi-radius);
 	background-color: var(--vscode-editorActionList-background);
 	color: var(--vscode-editorActionList-foreground);
 	padding: 4px;
@@ -61,10 +61,12 @@
 	cursor: pointer;
 	touch-action: none;
 	width: 100%;
-	border-radius: 4px;
+	border-radius: var(--tomi-radius);
 }
 
-.action-widget .monaco-list .monaco-list-row.action.focused:not(.option-disabled) {
+.action-widget
+	.monaco-list
+	.monaco-list-row.action.focused:not(.option-disabled) {
 	background-color: var(--vscode-editorActionList-focusBackground) !important;
 	color: var(--vscode-editorActionList-focusForeground);
 	outline: 1px solid var(--vscode-menu-selectionBorder, transparent);
@@ -81,7 +83,10 @@
 	margin-top: 2px;
 }
 
-.action-widget .monaco-scrollable-element .monaco-list-rows .monaco-list-row.separator {
+.action-widget
+	.monaco-scrollable-element
+	.monaco-list-rows
+	.monaco-list-row.separator {
 	border-top: 1px solid var(--vscode-editorHoverWidget-border);
 	color: var(--vscode-descriptionForeground);
 	font-size: 12px;
@@ -92,7 +97,10 @@
 	border-radius: 0;
 }
 
-.action-widget .monaco-scrollable-element .monaco-list-rows .monaco-list-row.separator.focused {
+.action-widget
+	.monaco-scrollable-element
+	.monaco-list-rows
+	.monaco-list-row.separator.focused {
 	outline: 0 solid;
 	background-color: transparent;
 	border-radius: 0;
@@ -123,12 +131,15 @@
 }
 
 .action-widget .monaco-list-row.action.option-disabled,
-.action-widget .monaco-list:focus .monaco-list-row.focused.action.option-disabled,
+.action-widget
+	.monaco-list:focus
+	.monaco-list-row.focused.action.option-disabled,
 .action-widget .monaco-list-row.action.option-disabled .codicon,
-.action-widget .monaco-list:not(.drop-target):not(.dragging) .monaco-list-row:hover:not(.selected):not(.focused).option-disabled {
+.action-widget
+	.monaco-list:not(.drop-target):not(.dragging)
+	.monaco-list-row:hover:not(.selected):not(.focused).option-disabled {
 	color: var(--vscode-disabledForeground);
 }
-
 
 .action-widget .monaco-list-row.action:not(.option-disabled) .codicon {
 	color: inherit;
@@ -140,15 +151,18 @@
 	text-overflow: ellipsis;
 }
 
-.action-widget .monaco-list-row.action .monaco-keybinding > .monaco-keybinding-key {
-		background-color: var(--vscode-keybindingLabel-background);
-		color: var(--vscode-keybindingLabel-foreground);
-		border-style: solid;
-		border-width: 1px;
-		border-radius: 3px;
-		border-color: var(--vscode-keybindingLabel-border);
-		border-bottom-color: var(--vscode-keybindingLabel-bottomBorder);
-		box-shadow: inset 0 -1px 0 var(--vscode-widget-shadow);
+.action-widget
+	.monaco-list-row.action
+	.monaco-keybinding
+	> .monaco-keybinding-key {
+	background-color: var(--vscode-keybindingLabel-background);
+	color: var(--vscode-keybindingLabel-foreground);
+	border-style: solid;
+	border-width: 1px;
+	border-radius: var(--tomi-radius);
+	border-color: var(--vscode-keybindingLabel-border);
+	border-bottom-color: var(--vscode-keybindingLabel-bottomBorder);
+	box-shadow: inset 0 -1px 0 var(--vscode-widget-shadow);
 }
 
 /* Action bar */

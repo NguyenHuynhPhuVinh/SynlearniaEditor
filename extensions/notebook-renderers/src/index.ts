@@ -512,7 +512,7 @@ export const activate: ActivationFunction<void> = (ctx) => {
 	}
 	#container .error-output-actions li {
 		padding: 0px 4px 0px 4px;
-		border-radius: 5px;
+		border-radius: var(--tomi-radius);
 		height: 20px;
 		display: inline-flex;
 		cursor: pointer;

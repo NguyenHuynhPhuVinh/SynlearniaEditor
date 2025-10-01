@@ -117,7 +117,7 @@ body {
 }
 
 .monaco-workbench.border.mac {
-	border-radius: 5px;
+	border-radius: var(--tomi-radius);
 }
 
 .monaco-workbench.border.mac.macos-bigsur-or-newer {

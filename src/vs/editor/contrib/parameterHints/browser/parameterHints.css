@@ -70,7 +70,8 @@
 }
 
 .monaco-editor .parameter-hints-widget .code {
-	font-family: var(--vscode-parameterHintsWidget-editorFontFamily), var(--vscode-parameterHintsWidget-editorFontFamilyDefault);
+	font-family: var(--vscode-parameterHintsWidget-editorFontFamily),
+		var(--vscode-parameterHintsWidget-editorFontFamilyDefault);
 }
 
 .monaco-editor .parameter-hints-widget .docs {
@@ -97,7 +98,7 @@
 
 .monaco-editor .parameter-hints-widget .docs code {
 	font-family: var(--monaco-monospace-font);
-	border-radius: 3px;
+	border-radius: var(--tomi-radius);
 	padding: 0 0.4em;
 	background-color: var(--vscode-textCodeBlock-background);
 }

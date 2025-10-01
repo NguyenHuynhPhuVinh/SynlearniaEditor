@@ -1024,7 +1024,7 @@ export function getMenuWidgetCSS(style: IMenuStyles, isForShadowDom: boolean): s
 	let result = /* css */`
 .monaco-menu {
 	font-size: 13px;
-	border-radius: 5px;
+	border-radius: var(--tomi-radius);
 	min-width: 160px;
 }
 
@@ -1143,7 +1143,7 @@ ${formatRule(Codicon.menuSubmenu)}
 	align-items: center;
 	position: relative;
 	margin: 0 4px;
-	border-radius: 4px;
+	border-radius: var(--tomi-radius);
 }
 
 .monaco-menu .monaco-action-bar.vertical .action-menu-item:hover .keybinding,
