@@ -4,16 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 
 :root {
-	--vscode-sash-size: 4px;
-	--vscode-sash-hover-size: 4px;
+	--vscode-sash-size: 6px;
+	--vscode-sash-hover-size: 6px;
 }
 
 .monaco-sash {
 	position: absolute;
 	z-index: 35;
 	touch-action: none;
-	background: var(--vscode-panel-border);
-	opacity: 0.6;
+	background: var(--vscode-titleBar-activeBackground);
+	opacity: 1;
 }
 
 .monaco-sash.disabled {
@@ -131,4 +131,11 @@
 
 .monaco-sash.debug:not(.disabled) > .orthogonal-drag-handle {
 	background: red;
+}
+
+/** Hide sidebar left sash **/
+.monaco-workbench .part.sidebar ~ .monaco-sash.vertical,
+.monaco-workbench .monaco-sash.vertical:first-of-type {
+	display: none !important;
+	visibility: hidden !important;
 }

@@ -7,6 +7,18 @@
 	border-radius: var(--tomi-radius);
 }
 
+/* Hide sash visual inside sidebar but keep functionality */
+.monaco-workbench .part.sidebar .monaco-sash {
+	background: transparent !important;
+}
+
+/* Show sash on hover and when active/dragging */
+.monaco-workbench .part.sidebar .monaco-sash:hover,
+.monaco-workbench .part.sidebar .monaco-sash.active {
+	background: var(--vscode-sash-hoverBorder) !important;
+	opacity: 1 !important;
+}
+
 .monaco-workbench.nosidebar > .part.sidebar {
 	display: none !important;
 	visibility: hidden !important;

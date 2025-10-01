@@ -7,8 +7,9 @@ import { localize } from '../../../../nls.js';
 import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
 import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
 import { Registry } from '../../../../platform/registry/common/platform.js';
-import { IViewsRegistry, IViewDescriptor, Extensions as ViewExtensions } from '../../../common/views.js';
-import { VIEW_CONTAINER } from '../../files/browser/explorerViewlet.js';
+import { IViewDescriptor } from '../../../common/views.js';
+// import { IViewsRegistry, Extensions as ViewExtensions } from '../../../common/views.js';
+// import { VIEW_CONTAINER } from '../../files/browser/explorerViewlet.js';
 import { ITimelineService, TimelinePaneId } from '../common/timeline.js';
 import { TimelineHasProviderContext, TimelineService } from '../common/timelineService.js';
 import { TimelinePane } from './timelinePane.js';
@@ -34,7 +35,7 @@ export class TimelinePaneDescriptor implements IViewDescriptor {
 	readonly weight = 30;
 	readonly collapsed = true;
 	readonly canToggleVisibility = true;
-	readonly hideByDefault = false;
+	readonly hideByDefault = true;
 	readonly canMoveView = true;
 	readonly when = TimelineHasProviderContext;
 
@@ -62,7 +63,8 @@ configurationRegistry.registerConfiguration({
 	}
 });
 
-Registry.as<IViewsRegistry>(ViewExtensions.ViewsRegistry).registerViews([new TimelinePaneDescriptor()], VIEW_CONTAINER);
+// Hidden TIMELINE view from Explorer
+// Registry.as<IViewsRegistry>(ViewExtensions.ViewsRegistry).registerViews([new TimelinePaneDescriptor()], VIEW_CONTAINER);
 
 namespace OpenTimelineAction {
 
