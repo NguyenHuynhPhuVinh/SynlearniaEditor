@@ -12,6 +12,8 @@
 	position: absolute;
 	z-index: 35;
 	touch-action: none;
+	background: var(--vscode-panel-border);
+	opacity: 0.6;
 }
 
 .monaco-sash.disabled {
@@ -50,15 +52,17 @@
 .monaco-sash.vertical {
 	cursor: ew-resize;
 	top: 0;
-	width: var(--vscode-sash-size);
+	width: var(--vscode-sash-hover-size);
 	height: 100%;
+	left: calc(50% - (var(--vscode-sash-hover-size) / 2));
 }
 
 .monaco-sash.horizontal {
 	cursor: ns-resize;
 	left: 0;
 	width: 100%;
-	height: var(--vscode-sash-size);
+	height: var(--vscode-sash-hover-size);
+	top: calc(50% - (var(--vscode-sash-hover-size) / 2));
 }
 
 .monaco-sash:not(.disabled) > .orthogonal-drag-handle {
@@ -102,32 +106,13 @@
 	right: calc(var(--vscode-sash-size) * -1);
 }
 
-.monaco-sash:before {
-	content: '';
-	pointer-events: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: transparent;
+.monaco-workbench:not(.reduce-motion) .monaco-sash {
+	transition: background-color 0.2s ease-out;
 }
 
-.monaco-workbench:not(.reduce-motion) .monaco-sash:before {
-	transition: background-color 0.1s ease-out;
-}
-
-.monaco-sash.hover:before,
-.monaco-sash.active:before {
+.monaco-sash.hover,
+.monaco-sash.active {
 	background: var(--vscode-sash-hoverBorder);
-}
-
-.monaco-sash.vertical:before {
-	width: var(--vscode-sash-hover-size);
-	left: calc(50% - (var(--vscode-sash-hover-size) / 2));
-}
-
-.monaco-sash.horizontal:before {
-	height: var(--vscode-sash-hover-size);
-	top: calc(50% - (var(--vscode-sash-hover-size) / 2));
 }
 
 .pointer-events-disabled {
