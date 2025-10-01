@@ -972,6 +972,7 @@
 		"--z-index-notebook-scrollbar",
 		"--z-index-run-button-container",
 		"--zoom-factor",
+		"--tomi-radius",
 		"--test-bar-width",
 		"--widget-color",
 		"--text-link-decoration",

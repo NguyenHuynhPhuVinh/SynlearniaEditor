@@ -6,10 +6,11 @@
 .monaco-workbench .part.activitybar {
 	width: 48px;
 	height: 100%;
+	border-radius: var(--tomi-radius);
 }
 
 .monaco-workbench .activitybar.bordered::before {
-	content: '';
+	content: "";
 	float: left;
 	position: absolute;
 	box-sizing: border-box;

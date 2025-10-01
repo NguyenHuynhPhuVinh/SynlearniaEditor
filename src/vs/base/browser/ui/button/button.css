@@ -3,12 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+:root {
+	--tomi-radius: 6px;
+}
+
 .monaco-text-button {
 	box-sizing: border-box;
 	display: flex;
 	width: 100%;
 	padding: 4px;
-	border-radius: 2px;
+	border-radius: var(--tomi-radius);
 	text-align: center;
 	cursor: pointer;
 	justify-content: center;
@@ -48,14 +52,16 @@
 	flex-basis: 100%;
 }
 
-.monaco-text-button.monaco-text-button-with-short-label > .monaco-button-label-short {
+.monaco-text-button.monaco-text-button-with-short-label
+	> .monaco-button-label-short {
 	flex-grow: 1;
 	width: 0;
 	overflow: hidden;
 }
 
 .monaco-text-button.monaco-text-button-with-short-label > .monaco-button-label,
-.monaco-text-button.monaco-text-button-with-short-label > .monaco-button-label-short {
+.monaco-text-button.monaco-text-button-with-short-label
+	> .monaco-button-label-short {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -100,13 +106,13 @@
 .monaco-button-dropdown > .monaco-button.monaco-dropdown-button {
 	border: 1px solid var(--vscode-button-border, transparent);
 	border-left-width: 0 !important;
-	border-radius: 0 2px 2px 0;
+	border-radius: 0 var(--tomi-radius) var(--tomi-radius) 0;
 	display: flex;
 	align-items: center;
 }
 
 .monaco-button-dropdown > .monaco-button.monaco-text-button {
-	border-radius: 2px 0 0 2px;
+	border-radius: var(--tomi-radius) 0 0 var(--tomi-radius);
 }
 
 .monaco-description-button {
@@ -138,7 +144,7 @@
 /* default color styles - based on CSS variables */
 
 .monaco-button.default-colors,
-.monaco-button-dropdown.default-colors > .monaco-button{
+.monaco-button-dropdown.default-colors > .monaco-button {
 	color: var(--vscode-button-foreground);
 	background-color: var(--vscode-button-background);
 }
@@ -165,7 +171,9 @@
 	border-bottom: 1px solid var(--vscode-button-border);
 }
 
-.monaco-button-dropdown.default-colors .monaco-button.secondary + .monaco-button-dropdown-separator {
+.monaco-button-dropdown.default-colors
+	.monaco-button.secondary
+	+ .monaco-button-dropdown-separator {
 	background-color: var(--vscode-button-secondaryBackground);
 }
 

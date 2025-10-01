@@ -10,10 +10,10 @@
 	overflow: hidden;
 	width: 20px;
 	height: 20px;
-	border-radius: 3px;
+	border-radius: var(--tomi-radius);
 	border: 1px solid transparent;
 	padding: 1px;
-	box-sizing:	border-box;
+	box-sizing: border-box;
 	user-select: none;
 	-webkit-user-select: none;
 }
@@ -41,7 +41,7 @@
 	height: 18px;
 	width: 18px;
 	border: 1px solid transparent;
-	border-radius: 3px;
+	border-radius: var(--tomi-radius);
 	margin-right: 9px;
 	margin-left: 0px;
 	padding: 0px;
@@ -52,7 +52,7 @@
 .monaco-action-bar .checkbox-action-item {
 	display: flex;
 	align-items: center;
-	border-radius: 2px;
+	border-radius: var(--tomi-radius);
 	padding-right: 2px;
 }
 
@@ -60,7 +60,9 @@
 	background-color: var(--vscode-toolbar-hoverBackground);
 }
 
-.monaco-action-bar .checkbox-action-item > .monaco-custom-toggle.monaco-checkbox {
+.monaco-action-bar
+	.checkbox-action-item
+	> .monaco-custom-toggle.monaco-checkbox {
 	margin-right: 4px;
 }
 

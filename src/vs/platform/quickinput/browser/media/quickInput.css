@@ -9,15 +9,15 @@
 	z-index: 2550;
 	left: 50%;
 	-webkit-app-region: no-drag;
-	border-radius: 6px;
+	border-radius: var(--tomi-radius);
 }
 
 .quick-input-titlebar {
 	cursor: grab;
 	display: flex;
 	align-items: center;
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
+	border-top-right-radius: var(--tomi-radius);
+	border-top-left-radius: var(--tomi-radius);
 }
 
 .quick-input-left-action-bar {
@@ -133,7 +133,7 @@
 .quick-input-count .monaco-count-badge {
 	vertical-align: middle;
 	padding: 2px 4px;
-	border-radius: 2px;
+	border-radius: var(--tomi-radius);
 	min-height: auto;
 	line-height: normal;
 }
@@ -203,10 +203,12 @@
 }
 
 .quick-input-list .monaco-list-row {
-	border-radius: 3px;
+	border-radius: var(--tomi-radius);
 }
 
-.quick-input-list .monaco-list-row[data-index="0"] .quick-input-list-entry.quick-input-list-separator-border {
+.quick-input-list
+	.monaco-list-row[data-index="0"]
+	.quick-input-list-entry.quick-input-list-separator-border {
 	border-top-style: none;
 }
 
@@ -253,13 +255,24 @@
 	align-items: center;
 }
 
-.quick-input-list .quick-input-list-rows > .quick-input-list-row .monaco-icon-label,
-.quick-input-list .quick-input-list-rows > .quick-input-list-row .monaco-icon-label .monaco-icon-label-container > .monaco-icon-name-container {
+.quick-input-list
+	.quick-input-list-rows
+	> .quick-input-list-row
+	.monaco-icon-label,
+.quick-input-list
+	.quick-input-list-rows
+	> .quick-input-list-row
+	.monaco-icon-label
+	.monaco-icon-label-container
+	> .monaco-icon-name-container {
 	flex: 1;
 	/* make sure the icon label grows within the row */
 }
 
-.quick-input-list .quick-input-list-rows > .quick-input-list-row .codicon[class*='codicon-'] {
+.quick-input-list
+	.quick-input-list-rows
+	> .quick-input-list-row
+	.codicon[class*="codicon-"] {
 	vertical-align: text-bottom;
 }
 
@@ -280,14 +293,22 @@
 }
 
 /* preserve list-like styling instead of tree-like styling */
-.quick-input-list .monaco-list .monaco-list-row .monaco-highlighted-label .highlight {
+.quick-input-list
+	.monaco-list
+	.monaco-list-row
+	.monaco-highlighted-label
+	.highlight {
 	font-weight: bold;
 	background-color: unset;
 	color: var(--vscode-list-highlightForeground) !important;
 }
 
 /* preserve list-like styling instead of tree-like styling */
-.quick-input-list .monaco-list .monaco-list-row.focused .monaco-highlighted-label .highlight {
+.quick-input-list
+	.monaco-list
+	.monaco-list-row.focused
+	.monaco-highlighted-label
+	.highlight {
 	color: var(--vscode-list-focusHighlightForeground) !important;
 }
 
@@ -324,11 +345,26 @@
 	/* separate from scrollbar */
 }
 
-.quick-input-list .quick-input-list-entry .quick-input-list-entry-action-bar .action-label.always-visible,
-.quick-input-list .quick-input-list-entry:hover .quick-input-list-entry-action-bar .action-label,
-.quick-input-list .quick-input-list-entry.focus-inside .quick-input-list-entry-action-bar .action-label,
-.quick-input-list .monaco-list-row.focused .quick-input-list-entry-action-bar .action-label,
-.quick-input-list .monaco-list-row.passive-focused .quick-input-list-entry-action-bar .action-label {
+.quick-input-list
+	.quick-input-list-entry
+	.quick-input-list-entry-action-bar
+	.action-label.always-visible,
+.quick-input-list
+	.quick-input-list-entry:hover
+	.quick-input-list-entry-action-bar
+	.action-label,
+.quick-input-list
+	.quick-input-list-entry.focus-inside
+	.quick-input-list-entry-action-bar
+	.action-label,
+.quick-input-list
+	.monaco-list-row.focused
+	.quick-input-list-entry-action-bar
+	.action-label,
+.quick-input-list
+	.monaco-list-row.passive-focused
+	.quick-input-list-entry-action-bar
+	.action-label {
 	display: flex;
 }
 
@@ -337,14 +373,20 @@
 	outline-offset: -1px;
 }
 
-.quick-input-list > .monaco-list:focus .monaco-list-row.focused .quick-input-list-entry.quick-input-list-separator-border {
+.quick-input-list
+	> .monaco-list:focus
+	.monaco-list-row.focused
+	.quick-input-list-entry.quick-input-list-separator-border {
 	border-color: transparent;
 }
 
 /* focused items in quick pick */
 .quick-input-list .monaco-list-row.focused .monaco-keybinding-key,
-.quick-input-list .monaco-list-row.focused .quick-input-list-entry .quick-input-list-separator {
-	color: inherit
+.quick-input-list
+	.monaco-list-row.focused
+	.quick-input-list-entry
+	.quick-input-list-separator {
+	color: inherit;
 }
 
 .quick-input-list .monaco-list-row.focused .monaco-keybinding-key {
@@ -367,7 +409,9 @@
 }
 
 /* Hide border when the item becomes the sticky one */
-.quick-input-list .monaco-tree-sticky-row .quick-input-list-entry.quick-input-list-separator-as-item.quick-input-list-separator-border {
+.quick-input-list
+	.monaco-tree-sticky-row
+	.quick-input-list-entry.quick-input-list-separator-as-item.quick-input-list-separator-border {
 	border-top-style: none;
 }
 
@@ -430,13 +474,24 @@
 	align-items: center;
 }
 
-.quick-input-tree .quick-input-tree-rows > .quick-input-tree-row .monaco-icon-label,
-.quick-input-tree .quick-input-tree-rows > .quick-input-tree-row .monaco-icon-label .monaco-icon-label-container > .monaco-icon-name-container {
+.quick-input-tree
+	.quick-input-tree-rows
+	> .quick-input-tree-row
+	.monaco-icon-label,
+.quick-input-tree
+	.quick-input-tree-rows
+	> .quick-input-tree-row
+	.monaco-icon-label
+	.monaco-icon-label-container
+	> .monaco-icon-name-container {
 	flex: 1;
 	/* make sure the icon label grows within the row */
 }
 
-.quick-input-tree .quick-input-tree-rows > .quick-input-tree-row .codicon[class*='codicon-'] {
+.quick-input-tree
+	.quick-input-tree-rows
+	> .quick-input-tree-row
+	.codicon[class*="codicon-"] {
 	vertical-align: text-bottom;
 }
 
@@ -472,11 +527,26 @@
 	/* separate from scrollbar */
 }
 
-.quick-input-tree .quick-input-tree-entry .quick-input-tree-entry-action-bar .action-label.always-visible,
-.quick-input-tree .quick-input-tree-entry:hover .quick-input-tree-entry-action-bar .action-label,
-.quick-input-tree .quick-input-tree-entry.focus-inside .quick-input-tree-entry-action-bar .action-label,
-.quick-input-tree .monaco-list-row.focused .quick-input-tree-entry-action-bar .action-label,
-.quick-input-tree .monaco-list-row.passive-focused .quick-input-tree-entry-action-bar .action-label {
+.quick-input-tree
+	.quick-input-tree-entry
+	.quick-input-tree-entry-action-bar
+	.action-label.always-visible,
+.quick-input-tree
+	.quick-input-tree-entry:hover
+	.quick-input-tree-entry-action-bar
+	.action-label,
+.quick-input-tree
+	.quick-input-tree-entry.focus-inside
+	.quick-input-tree-entry-action-bar
+	.action-label,
+.quick-input-tree
+	.monaco-list-row.focused
+	.quick-input-tree-entry-action-bar
+	.action-label,
+.quick-input-tree
+	.monaco-list-row.passive-focused
+	.quick-input-tree-entry-action-bar
+	.action-label {
 	display: flex;
 }
 

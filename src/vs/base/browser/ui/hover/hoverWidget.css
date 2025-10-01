@@ -104,7 +104,7 @@
 }
 
 .monaco-hover code {
-	border-radius: 3px;
+	border-radius: var(--tomi-radius);
 	padding: 0 0.4em;
 }
 
@@ -162,11 +162,11 @@
 }
 
 .monaco-hover .hover-contents a.code-link:before {
-	content: '(';
+	content: "(";
 }
 
 .monaco-hover .hover-contents a.code-link:after {
-	content: ')';
+	content: ")";
 }
 
 .monaco-hover .hover-contents a.code-link > span {
@@ -189,7 +189,11 @@
  * border or a `hr`) uses background color:
  * https://github.com/microsoft/vscode/issues/228136
  */
-.monaco-hover .markdown-hover .hover-contents:not(.code-hover-contents):not(.html-hover-contents) p:last-child [style*="background-color"] {
+.monaco-hover
+	.markdown-hover
+	.hover-contents:not(.code-hover-contents):not(.html-hover-contents)
+	p:last-child
+	[style*="background-color"] {
 	margin-bottom: 4px;
 	display: inline-block;
 }
@@ -198,7 +202,10 @@
  * Add a slight margin to try vertically align codicons with any text
  * https://github.com/microsoft/vscode/issues/221359
  */
-.monaco-hover .markdown-hover .hover-contents:not(.code-hover-contents):not(.html-hover-contents) span.codicon {
+.monaco-hover
+	.markdown-hover
+	.hover-contents:not(.code-hover-contents):not(.html-hover-contents)
+	span.codicon {
 	margin-bottom: 2px;
 }
 
