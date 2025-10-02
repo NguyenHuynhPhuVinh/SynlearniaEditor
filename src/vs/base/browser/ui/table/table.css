@@ -14,7 +14,7 @@
 }
 
 .monaco-table > .monaco-split-view2 {
-	border-bottom: 1px solid transparent;
+	border-bottom: 1px solid var(--vscode-widget-border);
 }
 
 .monaco-table > .monaco-list {
@@ -52,6 +52,9 @@
 }
 
 .monaco-workbench:not(.reduce-motion) .monaco-table > .monaco-split-view2,
-.monaco-workbench:not(.reduce-motion) .monaco-table > .monaco-split-view2 .monaco-sash.vertical::before {
+.monaco-workbench:not(.reduce-motion)
+	.monaco-table
+	> .monaco-split-view2
+	.monaco-sash.vertical::before {
 	transition: border-color 0.2s ease-out;
 }

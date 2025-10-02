@@ -11,7 +11,7 @@
 	width: 20px;
 	height: 20px;
 	border-radius: var(--tomi-radius);
-	border: 1px solid transparent;
+	border: 1px solid var(--vscode-input-border);
 	padding: 1px;
 	box-sizing: border-box;
 	user-select: none;
@@ -40,7 +40,7 @@
 .monaco-custom-toggle.monaco-checkbox {
 	height: 18px;
 	width: 18px;
-	border: 1px solid transparent;
+	border: 1px solid var(--vscode-checkbox-border);
 	border-radius: var(--tomi-radius);
 	margin-right: 9px;
 	margin-left: 0px;

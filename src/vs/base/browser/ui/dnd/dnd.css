@@ -14,7 +14,7 @@
 	/* Default styles */
 	background-color: var(--vscode-list-activeSelectionBackground);
 	color: var(--vscode-list-activeSelectionForeground);
-	outline: 1px solid var(--vscode-list-focusOutline);
+	outline: 1px solid var(--vscode-focusBorder);
 	outline-offset: -1px;
 
 	/*

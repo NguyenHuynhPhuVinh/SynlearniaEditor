@@ -12,6 +12,7 @@
 .monaco-keybinding > .monaco-keybinding-key {
 	display: inline-block;
 	border-style: solid;
+	border-color: var(--vscode-input-border);
 	border-width: 1px;
 	border-radius: var(--tomi-radius);
 	vertical-align: middle;
