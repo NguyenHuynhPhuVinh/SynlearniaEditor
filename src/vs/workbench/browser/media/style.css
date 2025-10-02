@@ -3,6 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+:root {
+	--tomi-radius: 6px;
+}
+
 /* Animations */
 
 @keyframes fadeIn {

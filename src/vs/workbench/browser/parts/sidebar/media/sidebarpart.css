@@ -5,6 +5,7 @@
 
 .monaco-workbench .part.sidebar {
 	border-radius: var(--tomi-radius);
+	overflow: hidden;
 }
 
 /* Hide sash visual inside sidebar but keep functionality */

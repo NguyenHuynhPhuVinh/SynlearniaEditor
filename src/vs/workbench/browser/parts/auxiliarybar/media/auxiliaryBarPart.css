@@ -5,6 +5,7 @@
 
 .monaco-workbench .part.auxiliarybar {
 	border-radius: var(--tomi-radius);
+	overflow: hidden;
 }
 
 .monaco-workbench.noauxiliarybar .part.auxiliarybar {

@@ -6,6 +6,7 @@
 .monaco-workbench .part.panel {
 	border-top-left-radius: var(--tomi-radius);
 	border-top-right-radius: var(--tomi-radius);
+	overflow: hidden;
 }
 
 .monaco-workbench.nopanel .part.panel {
