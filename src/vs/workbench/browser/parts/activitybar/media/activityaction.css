@@ -217,7 +217,21 @@
 	top: 0;
 	height: 100%;
 	width: 0;
-	border-left: 2px solid;
+	border-left: none;
+}
+
+.monaco-workbench
+	.activitybar
+	> .content
+	:not(.monaco-menu)
+	> .monaco-action-bar
+	.action-item.checked
+	.action-label {
+	background-color: var(--vscode-inputOption-activeBackground) !important;
+	border-radius: var(--tomi-radius) !important; /* rounded corners */
+	margin: 4px !important; /* spacing for corners */
+	width: 40px !important; /* reduced width for spacing */
+	height: 40px !important; /* reduced height for spacing */
 }
 
 .monaco-workbench.hc-black
