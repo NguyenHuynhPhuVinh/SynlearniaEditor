@@ -8,7 +8,7 @@ import { CancellationToken } from '../../../../base/common/cancellation.js';
 import { IStringDictionary } from '../../../../base/common/collections.js';
 import { onUnexpectedError } from '../../../../base/common/errors.js';
 import { Event } from '../../../../base/common/event.js';
-import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
+// import { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';
 import { mnemonicButtonLabel } from '../../../../base/common/labels.js';
 import { Disposable, DisposableStore, IDisposable, isDisposable } from '../../../../base/common/lifecycle.js';
 import { Schemas } from '../../../../base/common/network.js';
@@ -49,7 +49,7 @@ import { Extensions as ConfigurationMigrationExtensions, IConfigurationMigration
 import { ResourceContextKey, WorkbenchStateContext } from '../../../common/contextkeys.js';
 import { IWorkbenchContribution, IWorkbenchContributionsRegistry, registerWorkbenchContribution2, Extensions as WorkbenchExtensions, WorkbenchPhase } from '../../../common/contributions.js';
 import { EditorExtensions } from '../../../common/editor.js';
-import { IViewContainersRegistry, Extensions as ViewContainerExtensions, ViewContainerLocation } from '../../../common/views.js';
+// import { IViewContainersRegistry, Extensions as ViewContainerExtensions, ViewContainerLocation } from '../../../common/views.js';
 import { DEFAULT_ACCOUNT_SIGN_IN_COMMAND } from '../../../services/accounts/common/defaultAccount.js';
 import { IEditorService } from '../../../services/editor/common/editorService.js';
 import { EnablementState, IExtensionManagementServerService, IPublisherInfo, IWorkbenchExtensionEnablementService, IWorkbenchExtensionManagementService } from '../../../services/extensionManagement/common/extensionManagement.js';
@@ -79,9 +79,9 @@ import { ClearLanguageAction, ConfigureWorkspaceFolderRecommendedExtensionsActio
 import { ExtensionActivationProgress } from './extensionsActivationProgress.js';
 import { ExtensionsCompletionItemsProvider } from './extensionsCompletionItemsProvider.js';
 import { ExtensionDependencyChecker } from './extensionsDependencyChecker.js';
-import { clearSearchResultsIcon, configureRecommendedIcon, extensionsViewIcon, filterIcon, installWorkspaceRecommendedIcon, refreshIcon } from './extensionsIcons.js';
+import { clearSearchResultsIcon, configureRecommendedIcon, /* extensionsViewIcon, */ filterIcon, installWorkspaceRecommendedIcon, refreshIcon } from './extensionsIcons.js';
 import { InstallExtensionQuickAccessProvider, ManageExtensionsQuickAccessProvider } from './extensionsQuickAccess.js';
-import { BuiltInExtensionsContext, ExtensionMarketplaceStatusUpdater, ExtensionsSearchValueContext, ExtensionsSortByContext, ExtensionsViewletViewsContribution, ExtensionsViewPaneContainer, MaliciousExtensionChecker, RecommendedExtensionsContext, SearchHasTextContext, SearchMarketplaceExtensionsContext, StatusUpdater } from './extensionsViewlet.js';
+import { BuiltInExtensionsContext, ExtensionMarketplaceStatusUpdater, ExtensionsSearchValueContext, ExtensionsSortByContext, ExtensionsViewletViewsContribution, /* ExtensionsViewPaneContainer, */ MaliciousExtensionChecker, RecommendedExtensionsContext, SearchHasTextContext, SearchMarketplaceExtensionsContext, StatusUpdater } from './extensionsViewlet.js';
 import { ExtensionsWorkbenchService } from './extensionsWorkbenchService.js';
 import './media/extensionManagement.css';
 import { UnsupportedExtensionsMigrationContrib } from './unsupportedExtensionsMigrationContribution.js';
@@ -110,22 +110,24 @@ Registry.as<IEditorPaneRegistry>(EditorExtensions.EditorPane).registerEditorPane
 		new SyncDescriptor(ExtensionsInput)
 	]);
 
-export const VIEW_CONTAINER = Registry.as<IViewContainersRegistry>(ViewContainerExtensions.ViewContainersRegistry).registerViewContainer(
-	{
-		id: VIEWLET_ID,
-		title: localize2('extensions', "Extensions"),
-		openCommandActionDescriptor: {
-			id: VIEWLET_ID,
-			mnemonicTitle: localize({ key: 'miViewExtensions', comment: ['&& denotes a mnemonic'] }, "E&&xtensions"),
-			keybindings: { primary: KeyMod.CtrlCmd | KeyMod.Shift | KeyCode.KeyX },
-			order: 4,
-		},
-		ctorDescriptor: new SyncDescriptor(ExtensionsViewPaneContainer),
-		icon: extensionsViewIcon,
-		order: 4,
-		rejectAddedViews: true,
-		alwaysUseContainerInfo: true,
-	}, ViewContainerLocation.Sidebar);
+// REMOVED: Extensions view container registration to hide from Activity Bar
+// export const VIEW_CONTAINER = Registry.as<IViewContainersRegistry>(ViewContainerExtensions.ViewContainersRegistry).registerViewContainer(
+// 	{
+// 		id: VIEWLET_ID,
+// 		title: localize2('extensions', "Extensions"),
+// 		openCommandActionDescriptor: {
+// 			id: VIEWLET_ID,
+// 			mnemonicTitle: localize({ key: 'miViewExtensions', comment: ['&& denotes a mnemonic'] }, "E&&xtensions"),
+// 			keybindings: { primary: KeyMod.CtrlCmd | KeyMod.Shift | KeyCode.KeyX },
+// 			order: 4,
+// 		},
+// 		ctorDescriptor: new SyncDescriptor(ExtensionsViewPaneContainer),
+// 		icon: extensionsViewIcon,
+// 		order: 4,
+// 		rejectAddedViews: true,
+// 		alwaysUseContainerInfo: true,
+// 	}, ViewContainerLocation.Sidebar);
+export const VIEW_CONTAINER: any = null;
 
 Registry.as<IConfigurationRegistry>(ConfigurationExtensions.Configuration)
 	.registerConfiguration({
