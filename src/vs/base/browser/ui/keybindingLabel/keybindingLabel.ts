@@ -169,9 +169,6 @@ export class KeybindingLabel extends Disposable {
 		if (this.options.keybindingLabelBottomBorder) {
 			keyElement.style.borderBottomColor = this.options.keybindingLabelBottomBorder;
 		}
-		if (this.options.keybindingLabelShadow) {
-			keyElement.style.boxShadow = `inset 0 -1px 0 ${this.options.keybindingLabelShadow}`;
-		}
 
 		return keyElement;
 	}

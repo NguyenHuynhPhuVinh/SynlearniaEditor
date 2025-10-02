@@ -551,7 +551,7 @@ export class Dialog extends Disposable {
 
 		const fgColor = style.dialogForeground;
 		const bgColor = style.dialogBackground;
-		const shadowColor = style.dialogShadow ? `0 0px 8px ${style.dialogShadow}` : '';
+		const shadowColor = '';
 		const border = style.dialogBorder ? `1px solid ${style.dialogBorder}` : '';
 		const linkFgColor = style.textLinkForeground;
 
