@@ -139,3 +139,13 @@
 	display: none !important;
 	visibility: hidden !important;
 }
+
+/* Hide the resizer sash background for inline editor widgets (e.g. zone-widget, peek-view) */
+.zone-widget > .monaco-sash.horizontal {
+	background: transparent !important;
+}
+
+/* Hide the resizer sash for resizable hovers */
+.monaco-resizable-hover > .monaco-sash {
+	background: transparent !important;
+}
