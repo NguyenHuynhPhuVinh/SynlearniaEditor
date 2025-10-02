@@ -85,3 +85,18 @@
 .monaco-pane-view .pane:not(.merged-header) .monaco-progress-container {
 	top: 20px;
 }
+
+/* Composite Title (e.g., EXPLORER, SEARCH) - Enhanced styling */
+.monaco-workbench .pane-composite-part > .composite.title {
+	background-color: var(--vscode-activityBar-background) !important;
+	border-bottom: 1px solid var(--vscode-sideBar-border) !important;
+	padding: 10px 12px !important;
+	display: flex !important;
+	align-items: center !important;
+}
+
+.monaco-workbench .pane-composite-part > .composite.title .title-label h2 {
+	font-size: 13px !important;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+}

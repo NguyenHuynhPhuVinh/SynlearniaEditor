@@ -4,10 +4,10 @@
 	"include": "./dark_plus.json",
 	"colors": {
 		"activityBar.activeBorder": "#60a5fa",
-		"activityBar.background": "#0a0e1a",
+		"activityBar.background": "#151821",
 		"activityBar.border": "#252836",
 		"activityBar.foreground": "#f1f5f9",
-		"activityBar.inactiveForeground": "#94a3b8",
+		"activityBar.inactiveForeground": "#64748b",
 		"activityBarBadge.background": "#60a5fa",
 		"activityBarBadge.foreground": "#0a0e1a",
 		"badge.background": "#252836",
